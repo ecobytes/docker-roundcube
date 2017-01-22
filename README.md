@@ -1,10 +1,12 @@
-# robbertkl/roundcube
+# gandhiano/roundcube
 
 [![](https://badge.imagelayers.io/robbertkl/roundcube:latest.svg)](https://imagelayers.io/?images=robbertkl/roundcube:latest)
 
+Forked from [robbertkl/roundcube]
+
 Roundcube Docker container:
 
-* Made for [robbertkl/docker-mail](https://github.com/robbertkl/docker-mail), but can be used separately
+* Made for use with [modoboa](https://github.com/modoboa/modoboa), but can be used separately
 * It differs from [alunduil/roundcube](https://hub.docker.com/r/alunduil/roundcube/) in a number of ways:
     * Built from stable Roundcube releases, instead of a random master snapshot
     * Uses NGINX instead of Apache
@@ -19,14 +21,14 @@ Roundcube Docker container:
 Run it like this:
 
 ```
-docker run -d -p 80:80 robbertkl/roundcube
+docker run -d -p 80:80 gandhiano/roundcube
 ```
 
 Or you could use a separate data container, for example:
 
 ```
-docker create --name roundcube_data robbertkl/roundcube true
-docker run --name roundcube -d --volumes-from roundcube_data -p 80:80 robbertkl/roundcube
+docker create --name roundcube_data gandhiano/roundcube true
+docker run --name roundcube -d --volumes-from roundcube_data -p 80:80 gandhiano/roundcube
 ```
 
 ## Environment variables
@@ -35,7 +37,8 @@ To configure Roundcube, you can use `ROUNDCUBE_` environment variables for all r
 
 ## Authors
 
-* Robbert Klarenbeek, <robbertkl@renbeek.nl>
+* Robbert Klarenbeek <robbertkl@renbeek.nl>
+* Gualter Barbas Baptista <gualter@ecobytes.net>
 
 ## License
 

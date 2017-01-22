@@ -1,5 +1,5 @@
-FROM robbertkl/php
-MAINTAINER Robbert Klarenbeek <robbertkl@renbeek.nl>
+FROM gandhiano/php-fpm-nossl
+MAINTAINER Gualter Barbas Baptista <gualter@ecobytes.net>
 
 # Change NGINX document root
 ENV DOCUMENT_ROOT=/var/www/public_html
